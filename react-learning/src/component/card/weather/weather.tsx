@@ -40,6 +40,7 @@ export default function WeatherApp(){
                     
                 }
             }
+            const x = Payload.main.temp.toFixed(2) 
             console.log(Payload)
             setData(Payload)
         }catch(error){
@@ -48,22 +49,29 @@ export default function WeatherApp(){
         }
         console.log(`fetching ${input}`)
     }
+    
     return <>
         <div className='Weather'>
             <div className='Box'>
-                <label htmlFor='city'>Enter city name</label>
-                {/* เอาGetstateมารับค่า onchange   */}
-                <input onChange={(event)=>{setInput(event.target.value)}} id='city'></input>
-                <button onClick={()=>{searchCity()}}>Search</button>
+                <div className='searchText'>
+                    <label htmlFor='city'>Enter City Name </label>
+                    {/* เอาGetstateมารับค่า onchange   */}
+                    <input className='Input' onChange={(event)=>{setInput(event.target.value)}} id='city'></input>
+                    <button className='button' onClick={()=>{searchCity()}}><span>Search </span></button>
+                </div>
+
                 {data != null ?<>
-                    <h1>{data.name} city</h1>
-                    <h2>tempature = {data.main.temp}</h2>
-                    <h2>feels like = {data.main.feels_like}</h2>
-                    <h2>tempature min = {data.main.temp_min}</h2>
-                    <h2>tempature max = {data.main.temp_max}</h2>
+                    <h1>{data.name} City</h1>
+                    <img className='image' src='https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png'/>
+                    <h3>temperature = {data.main.temp - 273.15} °C</h3>
+                    <h3>feels like = {data.main.feels_like - 273.15} °C</h3>
+                    <h3>temperature min = {data.main.temp_min- 273.15} °C</h3>
+                    <h3>temperature max = {data.main.temp_max- 273.15} °C</h3>
                 </>:<>
-                    <h2>No current city</h2>
+                    <h2>No city yet</h2>
                 </>}
+
+                
             </div>
         </div>
     </>

@@ -1,19 +1,19 @@
 import "./App.css";
-import Card from "./component/card/card";
-import Hook from "./component/card/hooks/hook";
+// import Card from "./component/card/card";
+// import Hook from "./component/card/hooks/hook";
 import WeatherApp from "./component/card/weather/weather";
 
 
-interface IuserList {
-  name: string;
-  age: number;
-}
+// interface IuserList {
+//   name: string;
+//   age: number;
+// }
 function App() {
-  const userList: IuserList[] = [
-    { name: "Newton", age: 20 },
-    { name: "Kam", age: 20 },
-    { name: "Tonkla", age: 20 },
-  ];
+  // const userList: IuserList[] = [
+  //   { name: "Newton", age: 20 },
+  //   { name: "Kam", age: 20 },
+  //   { name: "Tonkla", age: 20 },
+  // ];
 
   return (
     <>
@@ -22,6 +22,7 @@ function App() {
           return <Card name={value.name} age={value.age}/>
         })}
         <Hook/> */}
+        
         <WeatherApp/>
       </div>
       
