@@ -1,0 +1,90 @@
+.Weather{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFE5EC;
+}
+.Box{
+    width: 500px;
+    height: 500px;
+    background-color: #FFB3C6;
+    text-align: center;
+    color: aliceblue;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.image{
+    width: 100px;
+    height: auto;
+}
+.Input{
+    color: #ff456a;
+    margin-left: 10px;
+    background-color:#F5DCE0;
+    text-shadow: 1px 1px #7878787a;
+}
+h1{
+    color:white;
+    text-shadow: 2px 2px #7878787a;
+    color: #FFE5EC;
+}
+h2{
+    color:#F5DCE0;
+    
+    text-shadow: 2px 2px #7878787a;
+}
+h3{
+    text-shadow: 2px 2px #7878787a;
+    color: #FFE5EC;
+    padding-top:15px ;
+}
+.searchText{
+    height: 100px;
+    text-shadow: 2px 2px #7878787a;
+    font-weight: 600;
+    padding-top: 20px;
+    color: rgb(255, 255, 255);
+}
+.button {
+    background-color: #E4A0B7;
+    color: white;
+    width: 80px;
+    height: auto;
+    text-shadow: 2px 2px #7878787a;
+    display: inline-block;
+    border-radius: 4px;
+    border: none;
+    text-align: center;
+    font-size: 14px;
+    padding: 5px 0px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
+}
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 10px;
+  }
